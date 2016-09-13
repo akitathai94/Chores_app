@@ -1,0 +1,2 @@
+class ApplyForRoomController < ApplicationController
+end

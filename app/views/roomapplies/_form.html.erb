@@ -1,0 +1,32 @@
+<%= form_for(roomapply) do |f| %>
+  <% if roomapply.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(roomapply.errors.count, "error") %> prohibited this roomapply from being saved:</h2>
+
+      <ul>
+      <% roomapply.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fullname %>
+    <%= f.text_field :fullname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

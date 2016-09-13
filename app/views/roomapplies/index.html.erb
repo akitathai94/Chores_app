@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Roomapplies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Description</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roomapplies.each do |roomapply| %>
+      <tr>
+        <td><%= roomapply.fullname %></td>
+        <td><%= roomapply.description %></td>
+        <td><%= roomapply.email %></td>
+        <td><%= link_to 'Show', roomapply %></td>
+        <td><%= link_to 'Edit', edit_roomapply_path(roomapply) %></td>
+        <td><%= link_to 'Destroy', roomapply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roomapply', new_roomapply_path %>

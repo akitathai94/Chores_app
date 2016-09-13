@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1> MAKE THIS APPLY FOR ROOM ONLY SHOW THE 'NEW'</h1>
+<p>
+  <strong>Fullname:</strong>
+  <%= @roomapply.fullname %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @roomapply.description %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @roomapply.email %>
+</p>
+
+<%= link_to 'Edit', edit_roomapply_path(@roomapply) %> |
+<%= link_to 'Back', roomapplies_path %>

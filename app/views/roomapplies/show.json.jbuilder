@@ -1,0 +1,1 @@
+json.partial! "roomapplies/roomapply", roomapply: @roomapply

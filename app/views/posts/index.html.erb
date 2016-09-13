@@ -1,0 +1,43 @@
+<h1>This is the index of Post</h1>
+<p id="notice"><%= notice %></p>
+<main class="row">
+    <article class="coffee-span-8 coffee-880-span-8 coffee-549-span-12 coffee-700-span-12">
+
+      <h2 class="heading-1">Content Goes Here</h2>
+
+      <p class="paragraph">
+
+        PUT THE TEXT AND STUFF HERE
+
+      </p>
+
+<br>
+
+ 
+<h1>Posts Table # 1</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.body %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+</div>
+</article>
+</div>  
+</main>
+

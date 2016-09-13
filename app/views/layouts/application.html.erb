@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SE131; Team AFK; Project Roomates</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <div class="row full-width-row header">
+    <header class="coffee-span-12">
+      <div class="container header-container">
+      <br>
+        <h1 class="page-heading">SE131; Team AFK : Project Roomate
+        </h1>
+        <br>
+        <p class="paragraph tagline">
+        Project Roomates
+        Team Members: *** <br>
+        This Header is in the application.html.erb in layout<br>
+        </p>
+        
+        <div>
+          <p class="paragraph tagline">Here is one form, simple search.
+		  <%= form_tag("/search", method: "get") do %>
+  			<%= label_tag(:q, "Search for a roomate or an item:") %>
+ 		 <%= text_field_tag(:q) %>
+  		<%= submit_tag("Search") %>
+ 		 <% end %>
+ 		 </p>
+
+      </div>
+    </header>
+  </div>
+  <br>
+   <div class="row">
+    <div class="coffee-span-2 nav-column">
+    
+    <%= link_to 'Link -> Create Comment Form', comments_url %>
+    <%= link_to 'Apply for A Room', apply_url %>
+    <%= link_to 'List Occupants', occupants_url %>
+    <%= link_to '*MAKE LINK TO FORM**', posts_url %>
+    
+    </div>
+  </div>
+
+</head>
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 body {
   background-color: #fff;
-  color: #333;
+  color: yellow;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 25px;
   line-height: 25px;
@@ -9,38 +9,37 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 22px;
   margin: 33px;
 }
 
 pre {
   background-color: #eee;
   padding: 10px;
-  font-size: 11px;
+  font-size: 20px;
 }
-
 a {
-  color: #000;
+  color: yellow;
 
   &:visited {
-    color: #666;
+    color: yellow;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: green;
   }
 }
 
+
 th {
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
 td {
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-bottom: 15px;
+  padding-left: 11px;
+  padding-right: 11px;
 }
 
 div {
@@ -79,7 +78,7 @@ div {
   }
 
   ul li {
-    font-size: 12px;
+    font-size: 20px;
     list-style: square;
   }
 }

@@ -15,18 +15,20 @@ p.paragraph.tagline {
   margin-top: 0;
   color: #ffb417;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 20px;
 }
 
 p.paragraph a.inline-link {
   color: #1f7bb6;
   text-decoration: underline;
+  font-size: 20px;
 }
 
 p.paragraph {
   color: #666;
   font-style: normal;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 p.paragraph.copywright {
@@ -63,7 +65,7 @@ a.link-text.nav-link {
   margin-bottom: 7px;
   padding-top: 5px;
   padding-bottom: 5px;
-  color: #1f7bb6;
+  color: yellow;
   line-height: 1.2;
 }
 
@@ -72,8 +74,8 @@ a.link-text.footer-nav {
   margin-bottom: 0;
   padding-right: 14px;
   padding-left: 0;
-  color: #fff;
-  text-decoration: underline;
+  color: yellow;
+
   font-size: 14px;
 }
 

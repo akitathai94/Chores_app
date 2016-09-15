@@ -1,1 +1,48 @@
-<h1>This is comment's index </h1>
+<h1>This is comment's index<br><br>Make this page show a list of comments rather than table. </h1>
+<h1>Guys, try to examine this page, I showed you how to create a simple object and then return it to this webpage. </h1>
+<p>*i am in the views/index_html.erb file</p>
+<center>
+
+
+<h3>
+###The font of this 'h3' is orange because <br>
+###I implemented a h3 inside apps->assets->comments.scss<br>
+
+###I am learning by experimenting
+<br>
+
+<br>
+***** Below this line and in this file I initiliazed an object called Learningstuff ****
+<br>
+<%= testing_a_class = Learningstuff.new %>
+<br>
+-The instance of the object is named   
+testing_a_class
+<br>
+-the class was made in : (models -> learningstuff.rb )
+<br>
+-There is getters/setters in that class.
+<br>
+<br> ----Lets call method testing_a_class.some_words; 
+<br>----Should return nil because nothing was set
+<br>
+
+<%= testing_a_class.some_words %>
+<br>----Now lets call method set_words("String")
+<br>
+<%= testing_a_class.set_words("This Sentence was pass threw the method set_words("") ") %>
+
+<% if @post != nil%>
+	<div class = 'field'>
+	<%= f.label :title %>
+</h3>
+
+</div>
+
+<% else %>
+<p> 
+There are no comments because @post is nil<br>
+######this comment is part of an if-else statement ######</p>
+<%end%>
+
+</center>

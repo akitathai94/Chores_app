@@ -1,4 +1,11 @@
 class CommentsController < ApplicationController
+	
+
+	def new
+		@comment = Comments.new
+	end
+
+
 	def create
 		@post = Post.find(params[:post_id])
 		#private var name posted

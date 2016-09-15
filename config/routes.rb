@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   	resources :comments
   end
 
+  get 'search', to: 'occupants#search'
   get 'comments', to: 'comments#index'
   get 'apply', to: 'roomapplies#new'
   get 'occupants', to: 'occupants#index'

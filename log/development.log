@@ -7432,3 +7432,673 @@ Processing by OccupantsController#index as HTML
 Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2016-09-14 11:45:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 971ms (Views: 935.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-14 11:46:06 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 107ms (Views: 90.1ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/occupants/1" for ::1 at 2016-09-14 11:46:11 -0700
+Processing by OccupantsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cfv704EzbLMu9n5+IZKZcVD9EwfDLk24uH7bhUIWoGFuusP4jQYiGg8Bk1B1z2bHtneDrgGLpdP/MsSqBR+C/A==", "id"=>"1"}
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT  "occupants".* FROM "occupants" WHERE "occupants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "occupants" WHERE "occupants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/occupants
+Completed 302 Found in 17ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-14 11:46:11 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 105ms (Views: 88.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/comments" for ::1 at 2016-09-14 11:46:19 -0700
+Processing by CommentsController#index as HTML
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 104ms (Views: 90.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=Thao&commit=Search" for ::1 at 2016-09-14 11:46:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (13.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (111.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1132.1ms)
+Started GET "/occupants" for ::1 at 2016-09-14 11:47:42 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 283ms (Views: 242.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=Joe&commit=Search" for ::1 at 2016-09-14 11:47:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (10.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1115.1ms)
+Started GET "/apply" for ::1 at 2016-09-14 11:48:20 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (11.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 136ms (Views: 113.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/roomapplies" for ::1 at 2016-09-14 11:48:32 -0700
+Processing by RoomappliesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s3aDlL9kyGywRb44CPiKz1oHhVHoP3WuTdbkMK3fTl9HKXmBNTZL+q/Qg9WDB6xGXWcINwHzQXar85zJojqWLw==", "roomapply"=>{"fullname"=>"Pontus", "description"=>"The man", "email"=>"pontusarfwedson@gmail.com"}, "commit"=>"Create Roomapply"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roomapplies" ("fullname", "description", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["fullname", "Pontus"], ["description", "The man"], ["email", "pontusarfwedson@gmail.com"], ["created_at", 2016-09-14 18:48:32 UTC], ["updated_at", 2016-09-14 18:48:32 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/roomapplies/3
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/roomapplies/3" for ::1 at 2016-09-14 11:48:32 -0700
+Processing by RoomappliesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mRoomapply Load (0.0ms)[0m  [1m[34mSELECT  "roomapplies".* FROM "roomapplies" WHERE "roomapplies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering roomapplies/show.html.erb within layouts/application
+  Rendered roomapplies/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 242ms (Views: 186.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-14 17:34:09 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (9.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 285ms (Views: 218.6ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-14 17:34:13 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 120ms (Views: 103.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/apply" for ::1 at 2016-09-14 17:34:16 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (9.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 138ms (Views: 121.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2016-09-14 17:34:17 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 106ms (Views: 91.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-14 17:34:20 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 105ms (Views: 88.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/apply" for ::1 at 2016-09-14 17:34:21 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (3.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 125ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apply" for ::1 at 2016-09-14 17:35:05 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (4.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 132ms (Views: 115.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-14 17:35:06 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 110ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comments" for ::1 at 2016-09-14 17:35:07 -0700
+Processing by CommentsController#index as HTML
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 120ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apply" for ::1 at 2016-09-14 17:35:12 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (5.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 119ms (Views: 104.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=test&commit=Search" for ::1 at 2016-09-14 17:58:54 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered collection of C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (31.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1154.1ms)
+Started GET "/search?utf8=%E2%9C%93&q=test&commit=Search" for ::1 at 2016-09-14 21:24:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered collection of C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (15.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1132.1ms)
+Started GET "/apply" for ::1 at 2016-09-15 00:32:34 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (2.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 124ms (Views: 110.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-15 00:37:07 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 107ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-15 00:46:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 569ms (Views: 535.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=Bob&commit=Search" for ::1 at 2016-09-15 00:47:08 -0700
+Processing by OccupantsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Bob", "commit"=>"Search"}
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT  "occupants".* FROM "occupants" WHERE "occupants"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Occupant with 'id'=all):
+  
+app/models/occupant.rb:8:in `search'
+app/controllers/occupants_controller.rb:58:in `search'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (723.0ms)
+Started GET "/search?utf8=%E2%9C%93&q=Bob&commit=Search" for ::1 at 2016-09-15 00:55:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OccupantsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Bob", "commit"=>"Search"}
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT  "occupants".* FROM "occupants" WHERE "occupants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Occupant with 'id'=1):
+  
+app/models/occupant.rb:8:in `search'
+app/controllers/occupants_controller.rb:58:in `search'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (882.1ms)
+Started GET "/" for ::1 at 2016-09-15 00:55:40 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 347ms (Views: 323.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-15 00:56:20 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 108ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=Joe&commit=Search" for ::1 at 2016-09-15 00:56:22 -0700
+Processing by OccupantsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Joe", "commit"=>"Search"}
+  Rendering occupants/search.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants" WHERE (first_name LIKE '%%')[0m
+  Rendered occupants/search.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: first_name: SELECT "occupants".* FROM "occupants" WHERE (first_name LIKE '%%')):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @occupants.each do |occupant| %>
+    17:       <tr>
+    18:         <td><%= occupant.firstname %></td>
+    19:         <td><%= occupant.lastname %></td>
+  
+app/views/occupants/search.html.erb:16:in `_app_views_occupants_search_html_erb___939419973_95163192'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (742.0ms)
+Started GET "/search?utf8=%E2%9C%93&q=Joe&commit=Search" for ::1 at 2016-09-15 00:57:14 -0700
+Processing by OccupantsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Joe", "commit"=>"Search"}
+  Rendering occupants/search.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants" WHERE (first_name LIKE '%Joe%')[0m
+  Rendered occupants/search.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: first_name: SELECT "occupants".* FROM "occupants" WHERE (first_name LIKE '%Joe%')):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @occupants.each do |occupant| %>
+    17:       <tr>
+    18:         <td><%= occupant.firstname %></td>
+    19:         <td><%= occupant.lastname %></td>
+  
+app/views/occupants/search.html.erb:16:in `_app_views_occupants_search_html_erb___939419973_89989140'
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby22/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (841.0ms)
+Started GET "/search?utf8=%E2%9C%93&q=Joe&commit=Search" for ::1 at 2016-09-15 00:58:18 -0700
+Processing by OccupantsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Joe", "commit"=>"Search"}
+  Rendering occupants/search.html.erb within layouts/application
+  [1m[36mOccupant Load (3.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants" WHERE (firstname LIKE '%Joe%')[0m
+  Rendered occupants/search.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 272ms (Views: 188.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=Bob&commit=Search" for ::1 at 2016-09-15 00:58:26 -0700
+Processing by OccupantsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Bob", "commit"=>"Search"}
+  Rendering occupants/search.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants" WHERE (firstname LIKE '%Bob%')[0m
+  Rendered occupants/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 101ms (Views: 85.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=Shafi&commit=Search" for ::1 at 2016-09-15 00:58:31 -0700
+Processing by OccupantsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Shafi", "commit"=>"Search"}
+  Rendering occupants/search.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants" WHERE (firstname LIKE '%Shafi%')[0m
+  Rendered occupants/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 113ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=Bob&commit=Search" for ::1 at 2016-09-15 00:58:36 -0700
+Processing by OccupantsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Bob", "commit"=>"Search"}
+  Rendering occupants/search.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants" WHERE (firstname LIKE '%Bob%')[0m
+  Rendered occupants/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 240ms (Views: 225.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search" for ::1 at 2016-09-15 00:59:24 -0700
+Processing by OccupantsController#search as HTML
+  Rendering occupants/search.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants" WHERE (firstname LIKE '%%')[0m
+  Rendered occupants/search.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 104ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-15 00:59:55 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 102ms (Views: 88.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-15 00:59:57 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 104ms (Views: 90.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/occupants/new" for ::1 at 2016-09-15 01:00:00 -0700
+Processing by OccupantsController#new as HTML
+  Rendering occupants/new.html.erb within layouts/application
+  Rendered occupants/_form.html.erb (23.0ms)
+  Rendered occupants/new.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 139ms (Views: 124.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/occupants.json" for ::1 at 2016-09-15 01:02:24 -0700
+Processing by OccupantsController#index as JSON
+  Rendering occupants/index.json.jbuilder
+  [1m[36mOccupant Load (1.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/_occupant.json.jbuilder (0.0ms)
+  Rendered occupants/_occupant.json.jbuilder (0.0ms)
+  Rendered occupants/index.json.jbuilder (20.0ms)
+Completed 200 OK in 82ms (Views: 68.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/occupants.html" for ::1 at 2016-09-15 01:02:33 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 107ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apply" for ::1 at 2016-09-15 01:04:54 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (3.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 125ms (Views: 102.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/roomapplies" for ::1 at 2016-09-15 01:05:11 -0700
+Processing by RoomappliesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AUIU2YUjq/mHp3ibFPNDcWrMt1JUsoD+GV3Bt89AM0sWvJG7EYNOfmLoA/nrOuEwsu/u6Ce/tseQA//0NjYvQ==", "roomapply"=>{"fullname"=>"Shafi ", "description"=>"I want to live in a room", "email"=>"shafi@gmail.com"}, "commit"=>"Create Roomapply"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "roomapplies" ("fullname", "description", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["fullname", "Shafi "], ["description", "I want to live in a room"], ["email", "shafi@gmail.com"], ["created_at", 2016-09-15 08:05:11 UTC], ["updated_at", 2016-09-15 08:05:11 UTC]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/roomapplies/4
+Completed 302 Found in 9ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/roomapplies/4" for ::1 at 2016-09-15 01:05:11 -0700
+Processing by RoomappliesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRoomapply Load (0.0ms)[0m  [1m[34mSELECT  "roomapplies".* FROM "roomapplies" WHERE "roomapplies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering roomapplies/show.html.erb within layouts/application
+  Rendered roomapplies/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 128ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apply" for ::1 at 2016-09-15 01:05:24 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (3.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 113ms (Views: 100.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2016-09-15 01:11:33 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 143ms (Views: 124.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apply" for ::1 at 2016-09-15 01:12:15 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (3.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 120ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/comments" for ::1 at 2016-09-15 01:12:17 -0700
+Processing by CommentsController#index as HTML
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 108ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apply" for ::1 at 2016-09-15 01:12:20 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (3.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 117ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/occupants" for ::1 at 2016-09-15 01:17:26 -0700
+Processing by OccupantsController#index as HTML
+  Rendering occupants/index.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants"[0m
+  Rendered occupants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 111ms (Views: 96.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/occupants/2/edit" for ::1 at 2016-09-15 01:17:29 -0700
+Processing by OccupantsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT  "occupants".* FROM "occupants" WHERE "occupants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering occupants/edit.html.erb within layouts/application
+  Rendered occupants/_form.html.erb (2.0ms)
+  Rendered occupants/edit.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 117ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-09-15 01:36:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 773ms (Views: 737.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=Joe&commit=Search" for ::1 at 2016-09-15 01:37:18 -0700
+Processing by OccupantsController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Joe", "commit"=>"Search"}
+  Rendering occupants/search.html.erb within layouts/application
+  [1m[36mOccupant Load (0.0ms)[0m  [1m[34mSELECT "occupants".* FROM "occupants" WHERE (firstname LIKE '%Joe%')[0m
+  Rendered occupants/search.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 110ms (Views: 93.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-09-15 01:37:37 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (28.0ms)
+  Rendered posts/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 151ms (Views: 137.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2016-09-15 01:38:09 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 103ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apply" for ::1 at 2016-09-15 01:38:22 -0700
+Processing by RoomappliesController#new as HTML
+  Rendering roomapplies/new.html.erb within layouts/application
+  Rendered roomapplies/_form.html.erb (3.0ms)
+  Rendered roomapplies/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 122ms (Views: 100.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/comments" for ::1 at 2016-09-15 01:38:27 -0700
+Processing by CommentsController#index as HTML
+  Rendering comments/index.html.erb within layouts/application
+  Rendered comments/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 257ms (Views: 244.0ms | ActiveRecord: 0.0ms)
+
+

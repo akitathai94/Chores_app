@@ -51,6 +51,16 @@ class OccupantsController < ApplicationController
     end
   end
 
+
+
+
+def search
+  @occupants = Occupant.search(params[:q])
+end
+
+
+
+
   # DELETE /occupants/1
   # DELETE /occupants/1.json
   def destroy
@@ -69,6 +79,6 @@ class OccupantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def occupant_params
-      params.require(:occupant).permit(:firstname, :lastname, :roomnumber)
+      params.require(:occupant).permit(:firstname, :lastname, :roomnumber, :q)
     end
 end
